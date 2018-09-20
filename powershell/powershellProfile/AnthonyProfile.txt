@@ -1,0 +1,25 @@
+$Console = $host.ui.RawUI
+
+$console.ForegroundColor = "DarkYellow"
+$console.BackgroundColor = "DarkMagenta"
+
+$buffer = $console.BufferSize
+$buffer.Width = 130
+$buffer.Height = 2000
+$console.BufferSize = $buffer
+
+$size = $console.WindowSize
+$size.Width = 130
+$size.Height = 50
+$console.WindowSize = $size
+
+$colors = $host.PrivateData
+$colors.VerboseForegroundColor = "blue"
+$colors.VerboseBackgroundColor = "white"
+$colors.WarningForegroundColor = "Red"
+$colors.WarningBackgroundColor = "Yellow"
+$colors.ErrorForegroundColor = "Yellow"
+$colors.ErrorBackgroundColor = "Red"
+
+Add-PSSnapin VMware.VimAutomation.Core
+Add-PSSnapin VMware.VumAutomation
